@@ -8,7 +8,7 @@ return [
             'config' => [
                 'driver' => 'mysql',
                 'host' => '127.0.0.1',
-                'db' => 'gbphp',
+                'db' => 'store',
                 'charset' => 'UTF8',
                 'login' => 'root',
                 'password' => 'root'

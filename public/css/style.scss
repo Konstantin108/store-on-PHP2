@@ -547,6 +547,7 @@ a {
   width: 261px;
   min-height: 372px;
   transition: .4s;
+  margin-bottom: 20px;
 
 }
 
@@ -2606,7 +2607,8 @@ input[type=radio] {
 
 .women__collection {
   width: 1141px;
-  height: 730px;
+  min-height: 730px;
+  padding-bottom: 20px;
   border: 1px solid #eaeaea;
   position: absolute;
   z-index: 1;
@@ -2644,6 +2646,7 @@ input[type=radio] {
   line-height: 24px;
   font-weight: 700;
   color: #f16d7f;
+  text-transform: uppercase;
 }
 
 .w__text_moshino {
@@ -2679,6 +2682,7 @@ input[type=radio] {
   line-height: 24px;
   font-weight: 700;
   color: #2f2f2f;
+  text-transform: uppercase;
 }
 
 .w__price {
@@ -2826,7 +2830,7 @@ input[type=radio] {
 
 .choose__size_summary_drop::after {
   content: "";
-  background-image: url("img/choose_down.png");
+  background-image: url(../img/choose_down.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2834,7 +2838,7 @@ input[type=radio] {
 
 .choose__color_summary_drop::after {
   content: "";
-  background-image: url("img/choose_down.png");
+  background-image: url(../img/choose_down.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2842,7 +2846,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__size_summary_drop::after {
   content: "";
-  background-image: url("img/choose_up.png");
+  background-image: url(../img/choose_up.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2850,7 +2854,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__color_summary_drop::after {
   content: "";
-  background-image: url("img/choose_up.png");
+  background-image: url(../img/choose_up.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -3106,7 +3110,7 @@ input[type=radio] {
 .shopping__image {
   width: 100px;
   height: 115px;
-  background-image: url("img/product__content1.jpg");
+  background-image: url(../img/product__content1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3114,15 +3118,23 @@ input[type=radio] {
 .shopping__image2 {
   width: 100px;
   height: 115px;
-  background-image: url("img/product__content2.jpg");
+  background-image: url(../img/product__content2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.twig_pos{
+  display: flex;
+  width: 250px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .shopping__image3 {
   width: 100px;
   height: 115px;
-  background-image: url("img/product__content3.jpg");
+  background-image: url(../img/product__content3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

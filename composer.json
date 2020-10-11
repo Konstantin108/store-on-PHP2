@@ -1,7 +1,8 @@
 {
     "require": {
         "twig/twig": "^3.0",
-        "phpunit/phpunit": "^8.5"
+        "phpunit/phpunit": "^8.5",
+        "symfony/asset": "^5.1"
     },
     "autoload": {
         "psr-4": {

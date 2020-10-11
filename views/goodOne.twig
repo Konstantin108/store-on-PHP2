@@ -1,13 +1,146 @@
 {% extends 'layouts/main.twig' %}
 {% block title %}{{ good.name }}{% endblock %}
 {% block content %}
-<h2>{{ good.name }}</h2>
-<h3>Цена товара: {{ good.price }}р.</h3>
-<h4>Информация о товаре</h4>
-<h3>{{ good.info }}</h3>
-<a href="/good/updateGood/?id={{ good.id }}">редактировать</a>
-    <a href=/basket/add/?id={{ good.id }}">в корзину</a><br><br>
-<a href=/good/delGood/?id={{ good.id }}" class="del">удалить товар</a><br><br>
-<a href=/good/all">назад</a>
-<hr>
+
+
+    <nav class="arrivals_product center">
+        <h2 class="arrivals_title">New Arrivals</h2>
+        <nav class="readcrumbs_arrivals"><a href="index.html" class="link_arrivals">Home/</a> <a href="#"
+                                                                                                 class="link_arrivals">Men/</a>
+            <a href="#" class="link_arrivals">New Arrivals</a></nav>
+    </nav>
+    <div class="women">
+        <div class="women_main_content">
+            <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-left slider_arrow fa-chevron-left-women"></i></a>
+            <img src="{{ good.img }}" alt="women_main_img" class="women_main_img">
+            <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-right slider_arrow fa-chevron-right-women"></i></a>
+        </div>
+        <div class="position__women_blocks"></div>
+        <div class="women__collection">
+            <article class="top__block">
+                <div class="w__top_text_and_bottom">
+                    <div class="w__collection">{{ good.sex }} COLLECTION</div>
+                    <div class="bottom__w"></div>
+                    <div class="bottom__w2"></div>
+                </div>
+                <h2 class="w__text_moshino">{{ good.name }}</h2>
+                <p class="w__text">{{ good.info }}</p>
+                <div class="material_and_designer">
+                    <div class="w__left_block">
+                        <span class="w__material">MATERIAL:</span>
+                        <span class="w__design">{{ good.material }}</span>
+                    </div>
+                    <div class="w__right_block">
+                        <span class="w__material">DESIGNER:</span>
+                        <span class="w__design">{{ good.designer }}</span>
+                    </div>
+                </div>
+                <p class="w__price">${{ good.price }}</p>
+            </article>
+            <div class="bottom__block">
+                <div class="summares_bottom__block">
+                    <div class="choose__color_subblock">
+                        <h3 class="summares__titles">CHOOSE COLOR</h3>
+                        <details class="choose__size_details">
+                            <summary class="choose__color_summary_drop">
+                                <div class="color__block">
+                                    <div class="color_sample red__sample"></div>
+                                    <p class="color__name">Red</p>
+                                </div>
+                            </summary>
+                            <ul class="choose__size_menu">
+                                <li class="choose__size_menu_list">
+                                    <a href="#" class="choose__color_menu_link">
+                                        <div class="color__block">
+                                            <div class="color_sample black__sample">
+                                            </div>
+                                            black
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="choose__size_menu_list">
+                                    <a href="#" class="choose__color_menu_link">
+                                        <div class="color__block">
+                                            <div class="color_sample yellow__sample">
+                                            </div>
+                                            yellow
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="choose__size_menu_list">
+                                    <a href="#" class="choose__color_menu_link">
+                                        <div class="color__block">
+                                            <div class="color_sample pink__sample">
+                                            </div>
+                                            pink
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="choose__size_menu_list">
+                                    <a href="#" class="choose__color_menu_link">
+                                        <div class="color__block">
+                                            <div class="color_sample green_sample">
+                                            </div>
+                                            green
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="choose__size_menu_list">
+                                    <a href="#" class="choose__color_menu_link">
+                                        <div class="color__block">
+                                            <div class="color_sample white__sample">
+                                            </div>
+                                            white
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="choose__size_menu_list">
+                                    <a href="#" class="choose__color_menu_link">
+                                        <div class="color__block">
+                                            <div class="color_sample blue_sample">
+                                            </div>
+                                            blue
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="choose__size_subblock">
+                        <h3 class="summares__titles">CHOOSE SIZE</h3>
+                        <details class="choose__size_details">
+                            <summary class="choose__size_summary_drop">xxl</summary>
+                            <ul class="choose__size_menu">
+                                <li class="choose__size_menu_list"><a href="#"
+                                                                      class="choose__size_menu_link">xxs</a></li>
+                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xs</a>
+                                </li>
+                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">s</a>
+                                </li>
+                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">m</a>
+                                </li>
+                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">l</a>
+                                </li>
+                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xl</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="quanity__subblock">
+                        <h3 class="summares__titles">QUANTITY</h3>
+                        <input type="number" class="quanity_input">
+                    </div>
+                </div>
+                <a href=/basket/add/?id={{ good.id }}" class="add__bottom_cart">
+                    <i class="fas fa-shopping-cart cart__bottom"></i>Add to Cart
+                </a>
+                <a href="/good/updateGood/?id={{ good.id }}" class="add__bottom_cart">Edit</a>
+                <a href=/good/delGood/?id={{ good.id }}" class="add__bottom_cart">Delete</a>
+                <a href="/good" class="add__bottom_cart">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="women__space"></div>
 {% endblock %}
