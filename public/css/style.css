@@ -1703,6 +1703,8 @@ button {
 
 .featured__photo {
   transition: 0.9s;
+  width: 261px;
+  height: 300px;
 }
 
 .left_menu_list {
@@ -2567,8 +2569,24 @@ input[type=radio] {
   outline: 1px solid #f16d7f;
 }
 
+.add__bottom_cart_m {
+  margin-bottom: 16px;
+}
+
+.input_for_info {
+  width: 350px;
+  height: 40px;
+}
+
 .position__women_blocks {
   position: relative;
+}
+
+.block_input_pos {
+  display: flex;
+  width: 350px;
+  height: 60px;
+  justify-content: space-between;
 }
 
 .women__collection {
