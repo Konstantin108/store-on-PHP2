@@ -9,7 +9,8 @@
                                                                                                  class="link_arrivals">Men/</a>
             <a href="#" class="link_arrivals">New Arrivals</a></nav>
     </nav>
-    <div class="women">
+    <form class="women"  method="post" action="/good/edit">
+        <input name="idForEdit" value="{{ good.id }}" type="hidden">
         <div class="women_main_content">
             <a href="#" class="women_slider_element"><i
                         class="fas fa-chevron-left slider_arrow fa-chevron-left-women"></i></a>
@@ -43,95 +44,65 @@
                 <div class="summares_bottom__block">
                     <div class="choose__color_subblock">
                         <h3 class="summares__titles">CHOOSE COLOR</h3>
-                        <details class="choose__size_details">
-                            <summary class="choose__color_summary_drop">
-                                <div class="color__block">
-                                    <div class="color_sample red__sample"></div>
-                                    <p class="color__name">Red</p>
-                                </div>
-                            </summary>
-                            <ul class="choose__size_menu">
-                                <li class="choose__size_menu_list">
-                                    <a href="#" class="choose__color_menu_link">
-                                        <div class="color__block">
-                                            <div class="color_sample black__sample">
-                                            </div>
-                                            black
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="choose__size_menu_list">
-                                    <a href="#" class="choose__color_menu_link">
-                                        <div class="color__block">
-                                            <div class="color_sample yellow__sample">
-                                            </div>
-                                            yellow
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="choose__size_menu_list">
-                                    <a href="#" class="choose__color_menu_link">
-                                        <div class="color__block">
-                                            <div class="color_sample pink__sample">
-                                            </div>
-                                            pink
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="choose__size_menu_list">
-                                    <a href="#" class="choose__color_menu_link">
-                                        <div class="color__block">
-                                            <div class="color_sample green_sample">
-                                            </div>
-                                            green
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="choose__size_menu_list">
-                                    <a href="#" class="choose__color_menu_link">
-                                        <div class="color__block">
-                                            <div class="color_sample white__sample">
-                                            </div>
-                                            white
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="choose__size_menu_list">
-                                    <a href="#" class="choose__color_menu_link">
-                                        <div class="color__block">
-                                            <div class="color_sample blue_sample">
-                                            </div>
-                                            blue
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </details>
+
+                        <select name="chooseColor" id="chooseColor" class="choose__size_details">
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Red</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Black</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Yellow</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Pink</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Green</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">White</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Blue</p>
+                            </option>
+                        </select>
                     </div>
                     <div class="choose__size_subblock">
                         <h3 class="summares__titles">CHOOSE SIZE</h3>
-                        <details class="choose__size_details">
-                            <summary class="choose__size_summary_drop">xxl</summary>
-                            <ul class="choose__size_menu">
-                                <li class="choose__size_menu_list"><a href="#"
-                                                                      class="choose__size_menu_link">xxs</a></li>
-                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xs</a>
-                                </li>
-                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">s</a>
-                                </li>
-                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">m</a>
-                                </li>
-                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">l</a>
-                                </li>
-                                <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xl</a>
-                                </li>
-                            </ul>
-                        </details>
+
+                        <select name="chooseSize" id="chooseSize">
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xxl</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xl</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">l</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">s</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xs</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">m</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xxs</p>
+                            </option>
+
+                        </select>
+
                     </div>
                     <div class="quanity__subblock">
                         <h3 class="summares__titles">QUANTITY</h3>
-                        <input type="number" class="quanity_input" value="{{ good.quantity }}">
+                        <input type="number" class="quanity_input" name="quantityForEdit" value="{{ good.quantity }}">
                     </div>
+                    <input type="submit" value="подтвердить" class="summares__titles">
                 </div>
                 <a href=/basket/add/?id={{ good.id }}" class="add__bottom_cart">
                     <i class="fas fa-shopping-cart cart__bottom"></i>Add to Cart
@@ -141,6 +112,6 @@
                 <a href="/good" class="add__bottom_cart">Go Back</a>
             </div>
         </div>
-    </div>
+    </form>
     <div class="women__space"></div>
 {% endblock %}
