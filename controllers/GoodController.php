@@ -109,65 +109,64 @@ class GoodController extends Controller
         $id = $_POST['idForEdit'];
         $quantity = $_POST['quantityForEdit'];
 
-        $chooseColor = $_POST['chooseColor'];
-        $chooseSize = $_POST['chooseSize'];
+        $color = $_POST['chooseColor'];
+        $size = $_POST['chooseSize'];
 
         $good = new Good();
                     $good->id = $id;
                     $good->quantity = $quantity;
 
-
-        switch($chooseColor){
+        switch($color){
                             case 'Red':
-                                $chooseColor = 'Red';
+                                $color = 'Red';
                                 break;
                             case 'Black';
-                                $chooseColor = 'Black';
+                                $color = 'Black';
                                 break;
                             case 'Yellow';
-                                $chooseColor = 'Yellow';
+                                $color = 'Yellow';
                                 break;
                             case 'Pink';
-                                $chooseColor = 'Pink';
+                                $color = 'Pink';
                                 break;
                             case 'Green';
-                                $chooseColor = 'Green';
+                                $color = 'Green';
                                 break;
                             case 'Blue';
-                                $chooseColor = 'Blue';
+                                $color = 'Blue';
                                 break;
                             default:
-                                $chooseColor = 'White';
+                                $color = 'White';
                                 break;
                         }
 
-        switch($chooseSize){
+        switch($size){
                             case 'xl':
-                                $chooseSize = 'xl';
+                                $size = 'xl';
                                 break;
                             case 'l';
-                                $chooseSize = 'l';
+                                $size = 'l';
                                 break;
                             case 's';
-                                $chooseSize = 's';
+                                $size = 's';
                                 break;
                             case 'xs';
-                                $chooseSize = 'xs';
+                                $size = 'xs';
                                 break;
                             case 'm';
-                                $chooseSize = 'm';
+                                $size = 'm';
                                 break;
                             case 'xxs';
-                                $chooseSize = 'xxs';
+                                $size = 'xxs';
                                 break;
                             default:
-                                $chooseSize = 'xxl';
+                                $size = 'xxl';
                                 break;
                         }
 
-        $good->chooseColor = $chooseColor;
-        $good->chooseSize = $chooseSize;
-                if(!empty($quantity)){
+        $good->color = $color;
+        $good->size = $size;
+                if(!empty($quantity) && !empty($quantity) && !empty($quantity)){
                     $this->container->goodRepository->save($good);   //<--изменение для репозиториев и сущностей
                     header('Location: /good/one/?id=' . $id);   //<--путь изменён для twig
                     return '';
