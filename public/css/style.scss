@@ -1745,6 +1745,8 @@ button {
   width: 243px;
 }
 
+
+
 .left_menu_list:hover .left__summary {
   color: #f16d7f;
   cursor: pointer;
@@ -2573,6 +2575,13 @@ input[type=radio] {
   height: 777px;
 }
 
+.women_empty{
+  display: flex;
+  background-color: #f7f7f7;
+  justify-content: center;
+  min-height: 240px;
+}
+
 .women_slider_element {
   width: 47px;
   height: 47px;
@@ -2986,6 +2995,11 @@ input[type=radio] {
 
 .bottom__block {
   margin-top: 63px;
+}
+
+.update_block{
+  margin-top: 63px;
+  padding-bottom: 30px;
 }
 
 .like__also_title {
