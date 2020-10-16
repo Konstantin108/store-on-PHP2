@@ -1,0 +1,41 @@
+{% extends 'layouts/main.twig' %}
+{% block title %}Список пользователей{% endblock %}
+{% block content %}
+    <div class="coup_discont center">
+        <div class="coup_block1">
+            <h2 class="coup_title">Shipping Adress</h2>
+            <details class="coup__details">
+                <summary class="text_view text_view_summary">Bangladesh</summary>
+                <ul class="drop__view_menu">
+                    <li class="drop__view_list"><a href="#" class="drop__view_link">Moscow</a></li>
+                    <li class="drop__view_list"><a href="#" class="drop__view_link">berlin</a></li>
+                    <li class="drop__view_list"><a href="#" class="drop__view_link">Washington</a></li>
+                    <li class="drop__view_list"><a href="#" class="drop__view_link">Tokyo</a></li>
+                    <li class="drop__view_list"><a href="#" class="drop__view_link">Vienna</a></li>
+                </ul>
+            </details>
+            <input type="text" class="text_view" placeholder="State">
+            <input type="number" class="text_view" placeholder="Postcode / Zip">
+            <div class="coup__butt text__coupon_position">get a quote</div>
+        </div>
+        <div class="coup_block2">
+            <h2 class="coup_title">coupon discount</h2>
+            <p class="coup_text">Enter your coupon code if you have one</p>
+            <input type="text" class="text_view" placeholder="State">
+            <div class="coup__butt2 text__coupon_position">Apply coupon</div>
+        </div>
+        <div class="coup_block3">
+            <div class="coup__sub_block3">
+                <div>
+                    <span class="sub__total_price">Sub total</span><span
+                            class="sub__total_price ml_distance">$900</span>
+                </div>
+                <div>
+                    <span class="coup_title">GRAND TOTAL</span><span
+                            class="coup_title_special_color ml_distance">$900</span>
+                </div>
+            </div>
+            <div class="to__checkout text__coupon_position">proceed to checkout</div>
+        </div>
+    </div>
+{% endblock %}

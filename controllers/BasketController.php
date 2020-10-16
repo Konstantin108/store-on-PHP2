@@ -8,13 +8,23 @@ use app\services\BasketService;
 
 class BasketController extends Controller
 {
+     public function basketAllAction()
+     {
+        return $this->render('basket');
+     }
+
 
     protected $actionDefault = 'index';
 
     public function indexAction()
     {
-        echo '<pre>';
-        var_dump($_SESSION);
+        //echo '<pre>';
+        //var_dump($_SESSION);
+
+        foreach($_SESSION as $value){    //<-- сделать цикл внутри цикла
+            echo '<pre>';
+            echo $value;
+        }
     }
 
    public function addAction()
