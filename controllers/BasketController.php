@@ -1,9 +1,9 @@
 <?php
 
-
-
 namespace app\controllers;
 
+use app\entities\Basket;
+use app\repositories\BasketRepository;
 use app\entities\Good;
 use app\repositories\GoodRepository;
 use app\services\BasketService;
@@ -13,62 +13,81 @@ class BasketController extends Controller
 {
      public function basketAllAction()
      {
-	foreach ($_SESSION as $field => $value) {
-	    if(is_array($value)){
-	        foreach($value as $field){
-	            foreach($field as $city){
-	                //echo '<pre>';
-	                //echo $city;
-	                $cityArr = array_fill(-1, count($field), $city);
-	            }
-	        }
-	    }else{
-	        //echo '<pre>';
-	        //echo $value;
-	    }
-
-
-	    }
-        return $this->render('basket',
-                        [
-                            'cityArr' => $cityArr,
-                            'value' => $value
-                        ]
-                    );
+        return $this->render('basket');
      }
 
-    protected $actionDefault = 'index';
+    //protected $actionDefault = 'index';
 
-    public function indexAction()
-    {
-        echo '<pre>';
-        var_dump($_SESSION);
+    //public function indexAction()
+    //{
+    //    echo '<pre>';
+    //    var_dump($_SESSION);
+//
+    //}
+
+       public function addAction()
+       {
+            $id_basket = $_POST['idForUpdate'];
+            $name_basket = $_POST['nameForUpdate'];
+            $price_basket = $_POST['priceForUpdate'];
+            $material_basket = $_POST['materialForUpdate'];
+            $designer_basket = $_POST['designerForUpdate'];
+            $img_basket = $_POST['imgForUpdate'];
+             $color_basket = $_POST['colorForUpdate'];
+             $sex_basket = $_POST['sexForUpdate'];
+           $info_basket = $_POST['infoForUpdate'];
+            $quantity_basket = $_POST['quantityForUpdate'];
+            $size_basket = $_POST['sizeForUpdate'];
+
+
+            $basket = new Basket();
+            $basket->id_basket = $id_basket;
+            $basket->name_basket = $name_basket;
+            $basket->price_basket = $price_basket;
+            $basket->material_basket = $material_basket;
+            $basket->designer_basket = $designer_basket;
+            $basket->img_basket = $img_basket;
+            $basket->color_basket = $color_basket;
+            $basket->sex_basket = $sex_basket;
+            $basket->info_basket = $info_basket;
+            $basket->quantity_basket = $quantity_basket;
+            $basket->size_basket = $size_basket;
 
 
 
-        $good = [];
-        $good = $_SESSION['goods'];
 
-        foreach($good as $goods) {
-          echo $good['name'];
-        }
-       // for ($i = 0; $i < count($good); $i++){
-       //     if(is_object($good[$i])){
-        //        echo 'this obj';
-       //     }
-       // }
-    }
 
-   public function addAction()
-   {
+            if(!empty($id_basket) &&
+            !empty($name_basket) &&
+            !empty($price_basket) &&
+            !empty($material_basket) &&
+            !empty($designer_basket) &&
+            !empty($img_basket) &&
+            !empty($color_basket) &&
+            !empty($sex_basket) &&
+            !empty($info_basket) &&
+            !empty($quantity_basket) &&
+            !empty($size_basket)
+                ){
+                $this->container->basketRepository->save($basket);
+                header('Location: /basket');   //<--путь изменён для twig
+                return '';
 
-       $msg = $this->container->basketService->add(
-            $this->getId(),
-            $this->container->goodRepository,
-            $this->request
-       );
-       return $this->redirect('', $msg);
-   }
+            }else{
+                return $this->render('emptyFields');
+            }
+       }
+
+   //public function addAction()
+   //{
+//
+   //    $msg = $this->container->basketService->add(
+   //         $this->getId(),
+   //         $this->container->goodRepository,
+    //        $this->request
+    //   );
+   //    return $this->redirect('', $msg);
+   //}
 
    //public function fakeAddAction()      <-- Метод для js
    //{

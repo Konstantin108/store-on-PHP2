@@ -517,7 +517,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   color: #222222;
-  margin-top: 20px;
+  margin-top: 30px;
   padding-left: 15px;
 }
 
@@ -534,7 +534,7 @@ a {
 .featured_link {
   display: block;
   width: 261px;
-  min-height: 372px;
+  min-height: 382px;
   transition: 0.4s;
   margin-bottom: 20px;
 }
@@ -648,6 +648,16 @@ button {
   display: flex;
   justify-content: center;
   margin-bottom: 113px;
+}
+
+.input_form {
+  height: 30px;
+  width: 150px;
+}
+
+.input_div_form {
+  display: flex;
+  flex-direction: column;
 }
 
 .button_right {

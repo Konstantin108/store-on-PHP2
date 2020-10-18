@@ -2,18 +2,18 @@
 
 namespace app\repositories;
 
-use app\entities\Order;
+use app\entities\Basket;
 
-class OrderRepository extends Repository
+class BasketRepository extends Repository
 {
     protected function getTableName() :string
     {
-        return 'orders';
+        return 'basket';
     }
 
     protected function getEntityName() :string
     {
-        return Order::class;
+        return Basket::class;
     }
 
 }

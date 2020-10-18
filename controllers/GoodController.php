@@ -58,11 +58,42 @@ class GoodController extends Controller
             $good->price = $price;
             $good->material = $material;
             $good->designer = $designer;
-            $good->size = $size;
             $good->color = $color;
-            $good->sex = $sex;
             $good->info = $info;
             $good->img = $img;
+
+            switch($sizeForUpdate){
+                                case 'xs':
+                                    $sizeForUpdate = 'xs';
+                                    break;
+                                case 's';
+                                    $sizeForUpdate = 's';
+                                    break;
+                                case 'm';
+                                    $sizeForUpdate = 'm';
+                                    break;
+                                case 'l';
+                                    $sizeForUpdate = 'l';
+                                    break;
+                                case 'xl';
+                                    $sizeForUpdate = 'xl';
+                                    break;
+                                case 'xxl';
+                                    $sizeForUpdate = 'xxl';
+                                    break;
+                            }
+
+            switch($sexForUpdate){
+                                case 'men':
+                                    $sexForUpdate = 'men';
+                                    break;
+                                case 'women';
+                                    $sexForUpdate = 'women';
+                                    break;
+                            }
+
+            $good->sex = $sex;
+            $good->size = $size;
 
             if(!empty($name) &&
             !empty($price) &&
@@ -103,6 +134,8 @@ class GoodController extends Controller
             header('Location: /good');   //<--путь изменён для twig
             return '';
     }
+
+
 
    // public function editAction()
    // {

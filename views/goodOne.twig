@@ -10,7 +10,7 @@
             <a href="#" class="link_arrivals">New Arrivals</a></nav>
     </nav>
     <form class="women"  method="post" action="/good/edit">
-        <input name="idForEdit" value="{{ good.id }}" type="hidden">
+        <input name="idForUpdate" value="{{ good.id }}" type="hidden">
         <div class="women_main_content">
             <a href="#" class="women_slider_element"><i
                         class="fas fa-chevron-left slider_arrow fa-chevron-left-women"></i></a>
@@ -42,67 +42,67 @@
             </article>
             <div class="bottom__block">
                 <div class="summares_bottom__block">
-                    <div class="choose__color_subblock">
-                        <h3 class="summares__titles">CHOOSE COLOR</h3>
+{#                    <div class="choose__color_subblock">#}
+{#                        <h3 class="summares__titles">CHOOSE COLOR</h3>#}
 
-                        <select name="chooseColor" id="chooseColor" class="choose__size_details">
-                            <option value="nothing" class="color__block">
-                                <p class="color__name">Red</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="color__name">Black</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="color__name">Yellow</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="color__name">Pink</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="color__name">Green</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="color__name">White</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="color__name">Blue</p>
-                            </option>
-                        </select>
-                    </div>
-                    <div class="choose__size_subblock">
-                        <h3 class="summares__titles">CHOOSE SIZE</h3>
+{#                        <select name="chooseColor" id="chooseColor" class="choose__size_details">#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="color__name">Red</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="color__name">Black</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="color__name">Yellow</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="color__name">Pink</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="color__name">Green</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="color__name">White</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="color__name">Blue</p>#}
+{#                            </option>#}
+{#                        </select>#}
+{#                    </div>#}
+{#                    <div class="choose__size_subblock">#}
+{#                        <h3 class="summares__titles">CHOOSE SIZE</h3>#}
 
-                        <select name="chooseSize" id="chooseSize">
-                            <option value="nothing" class="color__block">
-                                <p class="choose__size_summary_drop">xxl</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="choose__size_summary_drop">xl</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="choose__size_summary_drop">l</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="choose__size_summary_drop">s</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="choose__size_summary_drop">xs</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="choose__size_summary_drop">m</p>
-                            </option>
-                            <option value="nothing" class="color__block">
-                                <p class="choose__size_summary_drop">xxs</p>
-                            </option>
+{#                        <select name="chooseSize" id="chooseSize">#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="choose__size_summary_drop">xxl</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="choose__size_summary_drop">xl</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="choose__size_summary_drop">l</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="choose__size_summary_drop">s</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="choose__size_summary_drop">xs</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="choose__size_summary_drop">m</p>#}
+{#                            </option>#}
+{#                            <option value="nothing" class="color__block">#}
+{#                                <p class="choose__size_summary_drop">xxs</p>#}
+{#                            </option>#}
 
-                        </select>
+{#                        </select>#}
 
                     </div>
                     <div class="quanity__subblock">
                         <h3 class="summares__titles">QUANTITY</h3>
                         <input type="number" class="quanity_input" name="quantityForEdit" value="{{ good.quantity }}">
                     </div>
-                    <input type="submit" value="подтвердить" class="summares__titles">
+{#                    <input type="submit" value="подтвердить" class="summares__titles">#}
                 </div>
                 <a href=/basket/add/?id={{ good.id }}" class="add__bottom_cart">
                     <i class="fas fa-shopping-cart cart__bottom"></i>Add to Cart

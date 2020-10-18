@@ -33,7 +33,15 @@
 				<div class="block_input_pos">
 					<div>
 						<p>Размер</p>
-						<input name="sizeForUpdate" value="{{ good.size }}">
+						<select name="sizeForUpdate" id="sizeForUpdate">
+							<option value="nothing">Значение не выбрано</option>
+							<option value="xs">xs</option>
+							<option value="s">s</option>
+							<option value="m">m</option>
+							<option value="l">l</option>
+							<option value="xl">xl</option>
+							<option value="xxl">xxl</option>
+						</select>
 					</div>
 					<div>
 						<p>Цвет</p>
@@ -43,7 +51,11 @@
 				<div class="block_input_pos">
 					<div>
 						<p>Пол</p>
-						<input name="sexForUpdate" value="{{ good.sex }}">
+						<select name="sexForUpdate" id="sexForUpdate">
+							<option value="nothing">Значение не выбрано</option>
+							<option value="men">men</option>
+							<option value="women">women</option>
+						</select>
 					</div>
 				</div>
 				<p>Информация о товаре</p>
