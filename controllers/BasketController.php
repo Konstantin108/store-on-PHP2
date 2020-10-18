@@ -10,7 +10,28 @@ class BasketController extends Controller
 {
      public function basketAllAction()
      {
-        return $this->render('basket');
+	foreach ($_SESSION as $field => $value) {
+	    if(is_array($value)){
+	        foreach($value as $field){
+	            foreach($field as $city){
+	                //echo '<pre>';
+	                //echo $city;
+	                $cityArr = array_fill(-1, count($field), $city);
+	            }
+	        }
+	    }else{
+	        //echo '<pre>';
+	        //echo $value;
+	    }
+
+
+	    }
+        return $this->render('basket',
+                        [
+                            'cityArr' => $cityArr,
+                            'value' => $value
+                        ]
+                    );
      }
 
 
@@ -21,11 +42,48 @@ class BasketController extends Controller
         //echo '<pre>';
         //var_dump($_SESSION);
 
-        foreach($_SESSION as $value){    //<-- сделать цикл внутри цикла
-            echo '<pre>';
-            echo $value;
-        }
-    }
+	foreach ($_SESSION as $field => $value) {
+	    if(is_array($value)){
+	        foreach($value as $field){
+	            foreach($field as $city){
+	                echo '<pre>';
+	                echo $city;
+	            }
+	        }
+	    }else{
+	        echo '<pre>';
+	        echo $value;
+	    }
+
+       // while($array = current($_SESSION)){
+       //     if(is_array($array)){
+       //         echo key($array);
+       //     }
+       //     next($array);
+       // }
+
+    	$user = [
+    		'login' => 'admin',
+    		'password' => '123',
+    		'isAdmin' => true,
+    		'roles' => [
+    			'key_1' => 'moderator',      //foreach
+    			'key_2' => 'user'
+    		],
+    	];
+
+    	foreach ($user as $field => $value) {
+    		if(!is_array($value)){
+    				echo "$field => $value" . '<br>';      //foreach внутри foreach
+    				continue;
+    			}
+    			echo $field . '=>';
+    			foreach ($value as $role) {
+    				echo $role . ' <br>';
+    		}
+    	}
+
+    }}
 
    public function addAction()
    {

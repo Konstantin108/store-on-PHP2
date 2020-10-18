@@ -2962,6 +2962,14 @@ input[type=radio] {
   padding-bottom: 30px;
 }
 
+.big__block {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+
 .like__also_title {
   font-family: Lato;
   font-size: 24px;
