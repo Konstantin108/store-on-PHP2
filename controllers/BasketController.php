@@ -1,10 +1,13 @@
 <?php
 
+
+
 namespace app\controllers;
 
 use app\entities\Good;
 use app\repositories\GoodRepository;
 use app\services\BasketService;
+
 
 class BasketController extends Controller
 {
@@ -34,56 +37,27 @@ class BasketController extends Controller
                     );
      }
 
-
     protected $actionDefault = 'index';
 
     public function indexAction()
     {
-        //echo '<pre>';
-        //var_dump($_SESSION);
+        echo '<pre>';
+        var_dump($_SESSION);
 
-	foreach ($_SESSION as $field => $value) {
-	    if(is_array($value)){
-	        foreach($value as $field){
-	            foreach($field as $city){
-	                echo '<pre>';
-	                echo $city;
-	            }
-	        }
-	    }else{
-	        echo '<pre>';
-	        echo $value;
-	    }
 
-       // while($array = current($_SESSION)){
-       //     if(is_array($array)){
-       //         echo key($array);
+
+        $good = [];
+        $good = $_SESSION['goods'];
+
+        foreach($good as $goods) {
+          echo $good['name'];
+        }
+       // for ($i = 0; $i < count($good); $i++){
+       //     if(is_object($good[$i])){
+        //        echo 'this obj';
        //     }
-       //     next($array);
        // }
-
-    	$user = [
-    		'login' => 'admin',
-    		'password' => '123',
-    		'isAdmin' => true,
-    		'roles' => [
-    			'key_1' => 'moderator',      //foreach
-    			'key_2' => 'user'
-    		],
-    	];
-
-    	foreach ($user as $field => $value) {
-    		if(!is_array($value)){
-    				echo "$field => $value" . '<br>';      //foreach внутри foreach
-    				continue;
-    			}
-    			echo $field . '=>';
-    			foreach ($value as $role) {
-    				echo $role . ' <br>';
-    		}
-    	}
-
-    }}
+    }
 
    public function addAction()
    {

@@ -104,75 +104,75 @@ class GoodController extends Controller
             return '';
     }
 
-    public function editAction()
-    {
-        $id = $_POST['idForEdit'];
-        $quantity = $_POST['quantityForEdit'];
-
-        $color = $_POST['chooseColor'];
-        $size = $_POST['chooseSize'];
-
-        $good = new Good();
-                    $good->id = $id;
-                    $good->quantity = $quantity;
-
-        switch($color){
-                            case 'Red':
-                                $color = 'Red';
-                                break;
-                            case 'Black';
-                                $color = 'Black';
-                                break;
-                            case 'Yellow';
-                                $color = 'Yellow';
-                                break;
-                            case 'Pink';
-                                $color = 'Pink';
-                                break;
-                            case 'Green';
-                                $color = 'Green';
-                                break;
-                            case 'Blue';
-                                $color = 'Blue';
-                                break;
-                            default:
-                                $color = 'White';
-                                break;
-                        }
-
-        switch($size){
-                            case 'xl':
-                                $size = 'xl';
-                                break;
-                            case 'l';
-                                $size = 'l';
-                                break;
-                            case 's';
-                                $size = 's';
-                                break;
-                            case 'xs';
-                                $size = 'xs';
-                                break;
-                            case 'm';
-                                $size = 'm';
-                                break;
-                            case 'xxs';
-                                $size = 'xxs';
-                                break;
-                            default:
-                                $size = 'xxl';
-                                break;
-                        }
-
-        $good->color = $color;
-        $good->size = $size;
-                if(!empty($quantity) && !empty($quantity) && !empty($quantity)){
-                    $this->container->goodRepository->save($good);   //<--изменение для репозиториев и сущностей
-                    header('Location: /good/one/?id=' . $id);   //<--путь изменён для twig
-                    return '';
-                }else{
-                    return $this->render('emptyFields');
-                }
-    }
+   // public function editAction()
+   // {
+   //     $id = $_POST['idForEdit'];
+   //     $quantity = $_POST['quantityForEdit'];
+//
+   //     $color = $_POST['chooseColor'];
+   //     $size = $_POST['chooseSize'];
+//
+   //     $good = new Good();
+   //                 $good->id = $id;
+   //                 $good->quantity = $quantity;
+//
+   //     switch($color){
+    //                        case 'Red':
+    //                            $color = 'Red';
+    //                            break;
+    //                        case 'Black';
+    //                            $color = 'Black';
+    //                            break;
+    //                        case 'Yellow';
+    //                            $color = 'Yellow';
+    //                            break;
+    //                        case 'Pink';
+    //                            $color = 'Pink';
+    //                            break;
+    //                        case 'Green';
+    //                            $color = 'Green';
+     //                           break;
+     //                       case 'Blue';
+     //                           $color = 'Blue';
+      //                          break;
+      //                      default:
+      //                          $color = 'White';
+     //                           break;
+     //                   }
+//
+    //    switch($size){
+    //                        case 'xl':
+     //                           $size = 'xl';
+    //                            break;
+   //                         case 'l';
+    //                            $size = 'l';
+    //                            break;
+    //                        case 's';
+    //                            $size = 's';
+    //                            break;
+    //                        case 'xs';
+    //                            $size = 'xs';
+   //                             break;
+    //                        case 'm';
+    //                            $size = 'm';
+    //                            break;
+    //                        case 'xxs';
+    //                            $size = 'xxs';
+    //                            break;
+    //                        default:
+    //                            $size = 'xxl';
+    //                            break;
+   //                     }
+//
+    //    $good->color = $color;
+    //    $good->size = $size;
+    //            if(!empty($quantity) && !empty($quantity) && !empty($quantity)){
+    //                $this->container->goodRepository->save($good);   //<--изменение для репозиториев и сущностей
+    //                header('Location: /good/one/?id=' . $id);   //<--путь изменён для twig
+    //                return '';
+    //            }else{
+    //                return $this->render('emptyFields');
+    //            }
+    //}
 
 }
