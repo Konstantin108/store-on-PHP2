@@ -3,6 +3,8 @@
 namespace app\main;
 
 use app\traits\SingletonTrait;
+use Symfony\Component\Asset\Package;
+use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;
 
 class App
 {

@@ -547,6 +547,7 @@ a {
   width: 261px;
   min-height: 372px;
   transition: .4s;
+  margin-bottom: 20px;
 
 }
 
@@ -1735,12 +1736,16 @@ button {
 
 .featured__photo {
   transition: .9s;
+  width: 261px;
+  height: 300px;
 }
 
 .left_menu_list {
   list-style-type: none;
   width: 243px;
 }
+
+
 
 .left_menu_list:hover .left__summary {
   color: #f16d7f;
@@ -2570,6 +2575,13 @@ input[type=radio] {
   height: 777px;
 }
 
+.women_empty{
+  display: flex;
+  background-color: #f7f7f7;
+  justify-content: center;
+  min-height: 240px;
+}
+
 .women_slider_element {
   width: 47px;
   height: 47px;
@@ -2600,13 +2612,30 @@ input[type=radio] {
   outline: 1px solid #f16d7f;
 }
 
+.add__bottom_cart_m{
+  margin-bottom: 16px;
+}
+
+.input_for_info{
+  width: 350px;
+  height: 40px;
+}
+
 .position__women_blocks {
   position: relative;
 }
 
+.block_input_pos{
+  display: flex;
+  width: 350px;
+  height: 60px;
+  justify-content: space-between;
+}
+
 .women__collection {
   width: 1141px;
-  height: 730px;
+  min-height: 730px;
+  padding-bottom: 20px;
   border: 1px solid #eaeaea;
   position: absolute;
   z-index: 1;
@@ -2644,6 +2673,7 @@ input[type=radio] {
   line-height: 24px;
   font-weight: 700;
   color: #f16d7f;
+  text-transform: uppercase;
 }
 
 .w__text_moshino {
@@ -2679,6 +2709,7 @@ input[type=radio] {
   line-height: 24px;
   font-weight: 700;
   color: #2f2f2f;
+  text-transform: uppercase;
 }
 
 .w__price {
@@ -2826,7 +2857,7 @@ input[type=radio] {
 
 .choose__size_summary_drop::after {
   content: "";
-  background-image: url("img/choose_down.png");
+  background-image: url(../img/choose_down.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2834,7 +2865,7 @@ input[type=radio] {
 
 .choose__color_summary_drop::after {
   content: "";
-  background-image: url("img/choose_down.png");
+  background-image: url(../img/choose_down.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2842,7 +2873,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__size_summary_drop::after {
   content: "";
-  background-image: url("img/choose_up.png");
+  background-image: url(../img/choose_up.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2850,7 +2881,7 @@ input[type=radio] {
 
 .choose__size_details[open] > .choose__color_summary_drop::after {
   content: "";
-  background-image: url("img/choose_up.png");
+  background-image: url(../img/choose_up.png);
   background-repeat: no-repeat;
   height: 5px;
   width: 9px;
@@ -2964,6 +2995,19 @@ input[type=radio] {
 
 .bottom__block {
   margin-top: 63px;
+}
+
+.update_block{
+  margin-top: 63px;
+  padding-bottom: 30px;
+}
+
+.big__block{
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
 }
 
 .like__also_title {
@@ -3106,7 +3150,7 @@ input[type=radio] {
 .shopping__image {
   width: 100px;
   height: 115px;
-  background-image: url("img/product__content1.jpg");
+  background-image: url(../img/product__content1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3114,15 +3158,23 @@ input[type=radio] {
 .shopping__image2 {
   width: 100px;
   height: 115px;
-  background-image: url("img/product__content2.jpg");
+  background-image: url(../img/product__content2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.twig_pos{
+  display: flex;
+  width: 250px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .shopping__image3 {
   width: 100px;
   height: 115px;
-  background-image: url("img/product__content3.jpg");
+  background-image: url(../img/product__content3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3467,6 +3519,16 @@ input[type=radio] {
 
 .logo1 {
   transition: .4s;
+}
+
+.div___hidden{
+  display: flex;
+  flex-direction: column;
+}
+
+.input___hidden{
+  height: 30px;
+  width: 150px;
 }
 
 .logo1:hover {

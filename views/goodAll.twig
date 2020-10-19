@@ -35,126 +35,36 @@
     </div>
     <div class="clr"></div>
     <section class="fetured center">
-        <h3 class="fetured__title">Fetured Items</h3>
+        <h3 class="fetured__title">Featured Items</h3>
         <p class="fetured__text">Shop for items based on what we featured in this week</p>
+        <a  class="add__bottom_cart add__bottom_cart_m" href="/good/updateGood/?id={{ good.id }}">Добавить новый товар</a>
         <div class="blocks__position_featured center">
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self1"><img src="img/photo1.jpg" alt="photo___1"
-                                                   class="photo___1 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
+            {% for good in goods %}
+                <div class="featured_link">
+                    <div class="block__featured">
+                        <div class="block__self1"><img src="{{ good.img }}" alt="photo___1"
+                                                       class="photo___1 featured__photo">
+                            <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
+                                                                                 alt="cart_hover_img"
+                                                                                 class="cart_hover_img">
+                                <p class="hover_text">Add to Cart</p>
+                            </a>
+                        </div>
+                        <p class="featured_text">{{ good.name }}</p>
+                        <div class="twig_pos">
+                            <p class="featured_text2">${{ good.price }}</p>
+                            <a href="/good/one/?id={{ good.id }}">info</a>
+                        </div>
                     </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
                 </div>
-            </div>
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self2"><img src="img/photo2.jpg" alt="photo___2"
-                                                   class="photo___2 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
-                    </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
-                </div>
-            </div>
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self3"><img src="img/photo3.jpg" alt="photo___3"
-                                                   class="photo___3 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
-                    </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
-                </div>
-            </div>
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self4"><img src="img/photo4.jpg" alt="photo___4"
-                                                   class="photo___4 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
-                    </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
-                </div>
-            </div>
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self5"><img src="img/photo5.jpg" alt="photo___5"
-                                                   class="photo___5 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
-                    </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
-                </div>
-            </div>
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self6"><img src="img/photo6.jpg" alt="photo___6"
-                                                   class="photo___6 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
-                    </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
-                </div>
-            </div>
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self7"><img src="img/photo7.jpg" alt="photo___7"
-                                                   class="photo___7 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
-                    </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
-                </div>
-            </div>
-            <div class="featured_link">
-                <div class="block__featured">
-                    <div class="block__self8"><img src="img/photo8.jpg" alt="photo___8"
-                                                   class="photo___8 featured__photo">
-                        <a href="single_page.html" class="cart__hover"> <img src="img/cart_hover.svg"
-                                                                             alt="cart_hover_img"
-                                                                             class="cart_hover_img">
-                            <p class="hover_text">Add to Cart</p>
-                        </a>
-                    </div>
-                    <p class="featured_text">Mango People T-shirt</p>
-                    <p class="featured_text2">$52.00</p>
-                </div>
-            </div>
+            {% else %}
+                <h3 style="color: red">Список пуст</h3>
+            {% endfor %}
         </div>
     </section>
     <div class="clearfix"></div>
     <div class="space center">
-        <a href="Product.html" class="button_right">Browse All Product<img src="img/arrow_right.png"
+        <a href="products/productAll" class="button_right">Browse All Product<img src="img/arrow_right.png"
                                                                            alt="arrow_right"
                                                                            class="arrow_right">
         </a>
@@ -200,12 +110,4 @@
             </div>
         </div>
     </aside>
-    {% for good in goods %}
-        <h2>{{ good.name }}</h2>
-        <h3>Цена товара: {{ good.price }}р.</h3>
-        <a href="/good/one/?id={{ good.id }}">подробнее</a>
-        <hr>
-    {% else %}
-        <h3 style="color: red">Список пуст</h3>
-    {% endfor %}
 {% endblock %}

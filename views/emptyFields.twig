@@ -1,7 +1,12 @@
 {% extends 'layouts/main.twig' %}
 {% block title %}Ошибка ввода{% endblock %}
 {% block content %}
-<div class="del_block">
-    <h1 class="del_text">Необходимо заполнить все поля</h1>
-</div>
+
+    <div class="women_empty">
+            <div class="bottom__block">
+                <div href=/basket/add/?id={{ good.id }}" class="add__bottom_cart">Необходимо заполнить все поля</div>
+
+                <a href="/good" class="add__bottom_cart">Go Back</a>
+            </div>
+    </div>
 {% endblock %}

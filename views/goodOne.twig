@@ -1,13 +1,132 @@
 {% extends 'layouts/main.twig' %}
 {% block title %}{{ good.name }}{% endblock %}
 {% block content %}
-<h2>{{ good.name }}</h2>
-<h3>Цена товара: {{ good.price }}р.</h3>
-<h4>Информация о товаре</h4>
-<h3>{{ good.info }}</h3>
-<a href="/good/updateGood/?id={{ good.id }}">редактировать</a>
-    <a href=/basket/add/?id={{ good.id }}">в корзину</a><br><br>
-<a href=/good/delGood/?id={{ good.id }}" class="del">удалить товар</a><br><br>
-<a href=/good/all">назад</a>
-<hr>
+
+
+    <nav class="arrivals_product center">
+        <h2 class="arrivals_title">New Arrivals</h2>
+        <nav class="readcrumbs_arrivals"><a href="index.html" class="link_arrivals">Home/</a> <a href="#"
+                                                                                                 class="link_arrivals">Men/</a>
+            <a href="#" class="link_arrivals">New Arrivals</a></nav>
+    </nav>
+    <form class="women"  method="post" action="/good/edit">
+        <input name="idForEdit" value="{{ good.id }}" type="hidden">
+        <div class="women_main_content">
+            <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-left slider_arrow fa-chevron-left-women"></i></a>
+            <img src="{{ good.img }}" alt="women_main_img" class="women_main_img">
+            <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-right slider_arrow fa-chevron-right-women"></i></a>
+        </div>
+        <div class="position__women_blocks"></div>
+        <div class="women__collection">
+            <article class="top__block">
+                <div class="w__top_text_and_bottom">
+                    <div class="w__collection">{{ good.sex }} COLLECTION</div>
+                    <div class="bottom__w"></div>
+                    <div class="bottom__w2"></div>
+                </div>
+                <h2 class="w__text_moshino">{{ good.name }}</h2>
+                <p class="w__text">{{ good.info }}</p>
+                <div class="material_and_designer">
+                    <div class="w__left_block">
+                        <span class="w__material">MATERIAL:</span>
+                        <span class="w__design">{{ good.material }}</span>
+                    </div>
+                    <div class="w__right_block">
+                        <span class="w__material">DESIGNER:</span>
+                        <span class="w__design">{{ good.designer }}</span>
+                    </div>
+                </div>
+                <p class="w__price">${{ good.price }}</p>
+            </article>
+            <div class="bottom__block">
+                <div class="summares_bottom__block">
+                    <div class="choose__color_subblock">
+                        <h3 class="summares__titles">CHOOSE COLOR</h3>
+
+                        <select name="chooseColor" id="chooseColor" class="choose__size_details">
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Red</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Black</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Yellow</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Pink</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Green</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">White</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="color__name">Blue</p>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="choose__size_subblock">
+                        <h3 class="summares__titles">CHOOSE SIZE</h3>
+
+                        <select name="chooseSize" id="chooseSize">
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xxl</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xl</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">l</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">s</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xs</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">m</p>
+                            </option>
+                            <option value="nothing" class="color__block">
+                                <p class="choose__size_summary_drop">xxs</p>
+                            </option>
+
+                        </select>
+
+                    </div>
+                    <div class="quanity__subblock">
+                        <h3 class="summares__titles">QUANTITY</h3>
+                        <input type="number" class="quanity_input" name="quantityForEdit" value="{{ good.quantity }}">
+                    </div>
+                    <input type="submit" value="подтвердить" class="summares__titles">
+                </div>
+                <a href=/basket/add/?id={{ good.id }}" class="add__bottom_cart">
+                    <i class="fas fa-shopping-cart cart__bottom"></i>Add to Cart
+                </a>
+                <a href="/good/updateGood/?id={{ good.id }}" class="add__bottom_cart">Edit</a>
+                <a href=/good/delGood/?id={{ good.id }}" class="add__bottom_cart">Delete</a>
+                <a href="/good" class="add__bottom_cart">Go Back</a>
+            </div>
+        </div>
+
+        <form class="div___hidden" method="post" action="/good/addToCart">
+            <input name="nameForUpdate" value="{{ good.name }}">
+            <input name="idForUpdate" value="{{ good.id }}" class="input___hidden">
+            <input name="priceForUpdate" value="{{ good.price }}" class="input___hidden">
+            <input name="materialForUpdate" value="{{ good.material }}" class="input___hidden">
+            <input name="designerForUpdate" value="{{ good.designer }}" class="input___hidden">
+            <input name="sizeForUpdate" value="{{ good.size }}" class="input___hidden">
+            <input name="colorForUpdate" value="{{ good.color }}" class="input___hidden">
+            <input name="sexForUpdate" value="{{ good.sex }}" class="input___hidden">
+            <input name="infoForUpdate" value="{{ good.info }}" class="input___hidden">
+            <input name="imgForUpdate" value="{{ good.img }}" class="input___hidden">
+            <input name="quantityForUpdate" value="1" class="input___hidden">
+            <input type="submit" value="Add to Cart">
+        </form>
+    </form>
+    <div class="women__space"></div>
 {% endblock %}
