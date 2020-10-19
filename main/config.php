@@ -23,6 +23,9 @@ return [
         'userRepository' => [
                     'class' => \app\repositories\UserRepository::class,
         ],
+        'basketRepository' => [
+                    'class' => \app\repositories\BasketRepository::class,
+                ],
         'basketService' => [
                     'class' => \app\services\BasketService::class,
         ]

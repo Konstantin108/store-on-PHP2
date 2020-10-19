@@ -3521,6 +3521,16 @@ input[type=radio] {
   transition: .4s;
 }
 
+.div___hidden{
+  display: flex;
+  flex-direction: column;
+}
+
+.input___hidden{
+  height: 30px;
+  width: 150px;
+}
+
 .logo1:hover {
   transform: scale(1.04);
 }

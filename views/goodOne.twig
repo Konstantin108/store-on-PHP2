@@ -112,6 +112,21 @@
                 <a href="/good" class="add__bottom_cart">Go Back</a>
             </div>
         </div>
+
+        <form class="div___hidden" method="post" action="/good/addToCart">
+            <input name="nameForUpdate" value="{{ good.name }}">
+            <input name="idForUpdate" value="{{ good.id }}" class="input___hidden">
+            <input name="priceForUpdate" value="{{ good.price }}" class="input___hidden">
+            <input name="materialForUpdate" value="{{ good.material }}" class="input___hidden">
+            <input name="designerForUpdate" value="{{ good.designer }}" class="input___hidden">
+            <input name="sizeForUpdate" value="{{ good.size }}" class="input___hidden">
+            <input name="colorForUpdate" value="{{ good.color }}" class="input___hidden">
+            <input name="sexForUpdate" value="{{ good.sex }}" class="input___hidden">
+            <input name="infoForUpdate" value="{{ good.info }}" class="input___hidden">
+            <input name="imgForUpdate" value="{{ good.img }}" class="input___hidden">
+            <input name="quantityForUpdate" value="1" class="input___hidden">
+            <input type="submit" value="Add to Cart">
+        </form>
     </form>
     <div class="women__space"></div>
 {% endblock %}

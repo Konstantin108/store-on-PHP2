@@ -1,64 +1,76 @@
 {% extends 'layouts/main.twig' %}
 {% block title %}Редактирование {{ good.name }}{% endblock %}
 {% block content %}
-{% if good.id %}
-	<h1 style="color: blue">Редактирование товара <span>{{ good.name }}</span></h1>
-{% else %}
-    <h1 style="color: blue">Добавление нового товара</h1>
-{% endif %}
-		<form method="post" action="/good/getUpdateGood"  class="women_empty">
-			<div class="update_block">
-				<input name="idForUpdate" value="{{ good.id }}" type="hidden">
+	{% if good.id %}
+		<h1 style="color: blue">Редактирование товара <span>{{ good.name }}</span></h1>
+	{% else %}
+		<h1 style="color: blue">Добавление нового товара</h1>
+	{% endif %}
+	<form method="post" action="/good/getUpdateGood"  class="women_empty">
+		<div class="update_block">
+			<input name="idForUpdate" value="{{ good.id }}" type="hidden">
 
-				<div class="block_input_pos">
-					<div>
-						<p>Название товара</p>
-						<input name="nameForUpdate" value="{{ good.name }}">
-					</div>
-					<div>
-						<p>Цена</p>
-						<input name="priceForUpdate" value="{{ good.price }}">
-					</div>
+			<div class="block_input_pos">
+				<div>
+					<p>Название товара</p>
+					<input name="nameForUpdate" value="{{ good.name }}">
 				</div>
-				<div class="block_input_pos">
-					<div>
-						<p>Материал</p>
-						<input name="materialForUpdate" value="{{ good.material }}">
-					</div>
-					<div>
-						<p>Дизайнер</p>
-						<input name="designerForUpdate" value="{{ good.designer }}">
-					</div>
+				<div>
+					<p>Цена</p>
+					<input name="priceForUpdate" value="{{ good.price }}">
 				</div>
-				<div class="block_input_pos">
-					<div>
-						<p>Размер</p>
-						<input name="sizeForUpdate" value="{{ good.size }}">
-					</div>
-					<div>
-						<p>Цвет</p>
-						<input name="colorForUpdate" value="{{ good.color }}">
-					</div>
-				</div>
-				<div class="block_input_pos">
-					<div>
-						<p>Пол</p>
-						<input name="sexForUpdate" value="{{ good.sex }}">
-					</div>
-				</div>
-				<p>Информация о товаре</p>
-				<input name="infoForUpdate" class="input_for_info" value="{{ good.info }}"><br><br>
-
-				{% if good.id %}
-					<input type="submit" value="отредактировать"  class="add__bottom_cart">
-				{% else %}
-					<input type="submit" value="добавить"  class="add__bottom_cart">
-				{% endif %}
-				{% if good.id %}
-					<a href="/good/one/?id={{ good.id }}"  class="add__bottom_cart">назад</a>
-				{% else %}
-					<a href="/good"  class="add__bottom_cart">назад</a>
-				{% endif %}
 			</div>
-		</form>
+			<div class="block_input_pos">
+				<div>
+					<p>Материал</p>
+					<input name="materialForUpdate" value="{{ good.material }}">
+				</div>
+				<div>
+					<p>Дизайнер</p>
+					<input name="designerForUpdate" value="{{ good.designer }}">
+				</div>
+			</div>
+			<div class="block_input_pos">
+				<div>
+					<p>Размер</p>
+					<select name="sizeForUpdate" id="sizeForUpdate">
+						<option value="nothing">Значение не выбрано</option>
+						<option value="xs">xs</option>
+						<option value="s">s</option>
+						<option value="m">m</option>
+						<option value="l">l</option>
+						<option value="xl">xl</option>
+						<option value="xxl">xxl</option>
+					</select>
+				</div>
+				<div>
+					<p>Цвет</p>
+					<input name="colorForUpdate" value="{{ good.color }}">
+				</div>
+			</div>
+			<div class="block_input_pos">
+				<div>
+					<p>Пол</p>
+					<select name="sexForUpdate" id="sexForUpdate">
+						<option value="nothing">Значение не выбрано</option>
+						<option value="men">men</option>
+						<option value="women">women</option>
+					</select>
+				</div>
+			</div>
+			<p>Информация о товаре</p>
+			<input name="infoForUpdate" class="input_for_info" value="{{ good.info }}"><br><br>
+
+			{% if good.id %}
+				<input type="submit" value="отредактировать"  class="add__bottom_cart">
+			{% else %}
+				<input type="submit" value="добавить"  class="add__bottom_cart">
+			{% endif %}
+			{% if good.id %}
+				<a href="/good/one/?id={{ good.id }}"  class="add__bottom_cart">назад</a>
+			{% else %}
+				<a href="/good"  class="add__bottom_cart">назад</a>
+			{% endif %}
+		</div>
+	</form>
 {% endblock %}
