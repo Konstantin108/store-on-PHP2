@@ -93,5 +93,4 @@ class UserController extends Controller
         header('Location: /user/all');   //<--путь изменён для twig
         return '';
     }
-
 }

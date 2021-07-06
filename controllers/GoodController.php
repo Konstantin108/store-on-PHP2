@@ -187,6 +187,4 @@ class GoodController extends Controller
             return $this->render('emptyFields');
         }
     }
-
-
 }

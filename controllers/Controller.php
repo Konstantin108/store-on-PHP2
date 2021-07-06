@@ -75,6 +75,4 @@ abstract class Controller
 //
     //   return json_encode($data);
     //}
-
-
 }

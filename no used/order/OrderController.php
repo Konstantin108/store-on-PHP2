@@ -47,5 +47,4 @@ class OrderController extends Controller
         header('Location: /order/all');   //<--путь изменён для twig
         return '';
     }
-
 }

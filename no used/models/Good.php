@@ -18,5 +18,4 @@ class Good extends Model
     {
         return 'goods';
     }
-
 }
