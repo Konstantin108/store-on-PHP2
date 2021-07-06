@@ -3,7 +3,7 @@ return [
     'projectName' => 'мой проект',
     'defaultController' => 'good',
     'components' => [
-        'db'=> [
+        'db' => [
             'class' => \app\services\DB::class,
             'config' => [
                 'driver' => 'mysql',
@@ -21,13 +21,13 @@ return [
             'class' => \app\repositories\GoodRepository::class,
         ],
         'userRepository' => [
-                    'class' => \app\repositories\UserRepository::class,
+            'class' => \app\repositories\UserRepository::class,
         ],
         'basketRepository' => [
-                    'class' => \app\repositories\BasketRepository::class,
-                ],
+            'class' => \app\repositories\BasketRepository::class,
+        ],
         'basketService' => [
-                    'class' => \app\services\BasketService::class,
+            'class' => \app\services\BasketService::class,
         ]
     ],
 ];

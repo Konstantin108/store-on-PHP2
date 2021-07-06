@@ -2,19 +2,13 @@
 
 namespace app\controllers;
 
-use app\entities\Basket;
-use app\repositories\BasketRepository;
-use app\entities\Good;
-use app\repositories\GoodRepository;
-use app\services\BasketService;
-
 
 class BasketController extends Controller
 {
-     public function basketAllAction()
-     {
+    public function basketAllAction()
+    {
         return $this->render('basket');
-     }
+    }
 
     //protected $actionDefault = 'index';
 
@@ -26,29 +20,28 @@ class BasketController extends Controller
     //}
 
 
-
-   //public function addAction()
-   //{
+    //public function addAction()
+    //{
 //
-   //    $msg = $this->container->basketService->add(
-   //         $this->getId(),
-   //         $this->container->goodRepository,
+    //    $msg = $this->container->basketService->add(
+    //         $this->getId(),
+    //         $this->container->goodRepository,
     //        $this->request
     //   );
-   //    return $this->redirect('', $msg);
-   //}
+    //    return $this->redirect('', $msg);
+    //}
 
-   //public function fakeAddAction()      <-- Метод для js
-   //{
-   //    $msg = $this->container->basketService->add(
-   //         $this->getId(),
-   //         $this->container->goodRepository,
-   //         $this->request
-   //    );
+    //public function fakeAddAction()      <-- Метод для js
+    //{
+    //    $msg = $this->container->basketService->add(
+    //         $this->getId(),
+    //         $this->container->goodRepository,
+    //         $this->request
+    //    );
 //
-   //    return $this->sendJson([
-   //           'COUNT' => count($_SESSION[BasketService::BASKET_NAME]),
-   //           'MSG' => $msg,
-   //    ]);
-   //}
+    //    return $this->sendJson([
+    //           'COUNT' => count($_SESSION[BasketService::BASKET_NAME]),
+    //           'MSG' => $msg,
+    //    ]);
+    //}
 }

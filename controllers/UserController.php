@@ -3,7 +3,6 @@
 namespace app\controllers;
 
 use app\entities\User;
-use app\repositories\UserRepository;
 
 class UserController extends Controller
 {
@@ -18,10 +17,10 @@ class UserController extends Controller
         $id = $this->getId();
         $person = $this->container->userRepository->getOne($id);   //<--изменение для репозиториев и сущностей
         return $this->render('userOne',
-                        [
-                            'user' => $person,
-                        ]
-                     );
+            [
+                'user' => $person,
+            ]
+        );
     }
 
     public function updateUserAction()
@@ -29,10 +28,10 @@ class UserController extends Controller
         $id = $this->getId();
         $person = $this->container->userRepository->getOne($id);   //<--изменение для репозиториев и сущностей
         return $this->render('userUpdate',
-                        [
-                            'user' => $person,
-                        ]
-                     );
+            [
+                'user' => $person,
+            ]
+        );
     }
 
     public function getUpdateUserAction()
@@ -52,37 +51,37 @@ class UserController extends Controller
         $user->password = $password;
         $user->position = $position;
 
-        switch($is_admin){
-                    case 'yes':
-                        $is_admin = 2;
-                        break;
-                    case 'no';
-                        $is_admin = 0;
-                        break;
-                    default:
-                        $is_admin = 0;
-                        break;
-                }
+        switch ($is_admin) {
+            case 'yes':
+                $is_admin = 2;
+                break;
+            case 'no';
+                $is_admin = 0;
+                break;
+            default:
+                $is_admin = 0;
+                break;
+        }
 
         $user->is_admin = $is_admin;
-        if(!empty($login) && !empty($name) && !empty($password) && !empty($position)){
+        if (!empty($login) && !empty($name) && !empty($password) && !empty($position)) {
             $this->container->userRepository->save($user);   //<--изменение для репозиториев и сущностей
             header('Location: /user/all');   //<--путь изменён для twig
             return '';
-        }else{
+        } else {
             return $this->render('emptyFields');
         }
     }
 
     public function delUserAction()
     {
-            $id = $this->getId();
-            $person = $this->container->userRepository->getOne($id);   //<--изменение для репозиториев и сущностей
-            return $this->render('userDel',
-                             [
-                                'user' => $person,
-                             ]
-                         );
+        $id = $this->getId();
+        $person = $this->container->userRepository->getOne($id);   //<--изменение для репозиториев и сущностей
+        return $this->render('userDel',
+            [
+                'user' => $person,
+            ]
+        );
     }
 
     public function getDelUserAction()

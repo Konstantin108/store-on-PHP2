@@ -5,7 +5,7 @@
 }
 
 html,
-body{
+body {
   height: 100%;
 }
 
@@ -36,7 +36,6 @@ a {
 .top {
   flex-grow: 1;
 }
-
 
 
 .header {
@@ -353,9 +352,6 @@ a {
   width: 16px;
   color: #838383;
 }
-
-
-
 
 
 .arrow {
@@ -725,7 +721,7 @@ button {
 
 }
 
-.right__subblock_offer{
+.right__subblock_offer {
   display: flex;
   width: 373px;
   justify-content: space-between;
@@ -733,7 +729,7 @@ button {
   padding-left: 36px;
 }
 
-.forma_sale{
+.forma_sale {
   height: 40px;
   width: 40px;
 }
@@ -794,7 +790,7 @@ button {
   width: 81px;
 }
 
-.forma_king{
+.forma_king {
   height: 35px;
   width: 47px;
 }
@@ -805,13 +801,11 @@ button {
 }
 
 
-
 .offer_text_right {
   width: 219px;
   min-height: 140px;
   padding-left: 5px;
 }
-
 
 
 .block_color {
@@ -1302,8 +1296,6 @@ button {
 }
 
 
-
-
 .drop__last {
   right: -200px;
 }
@@ -1356,7 +1348,6 @@ button {
   //transition: .4s;
 
 }
-
 
 
 .drop__fleximg {
@@ -1744,7 +1735,6 @@ button {
   list-style-type: none;
   width: 243px;
 }
-
 
 
 .left_menu_list:hover .left__summary {
@@ -2338,9 +2328,11 @@ input[type=checkbox]:checked + .label8::before {
   color: #b3b2b2;
   transition: .4s;
 }
-.subscribe__form{
+
+.subscribe__form {
   display: flex;
 }
+
 .shipping__button {
   width: 180px;
   height: 50px;
@@ -2575,7 +2567,7 @@ input[type=radio] {
   height: 777px;
 }
 
-.women_empty{
+.women_empty {
   display: flex;
   background-color: #f7f7f7;
   justify-content: center;
@@ -2612,11 +2604,11 @@ input[type=radio] {
   outline: 1px solid #f16d7f;
 }
 
-.add__bottom_cart_m{
+.add__bottom_cart_m {
   margin-bottom: 16px;
 }
 
-.input_for_info{
+.input_for_info {
   width: 350px;
   height: 40px;
 }
@@ -2625,7 +2617,7 @@ input[type=radio] {
   position: relative;
 }
 
-.block_input_pos{
+.block_input_pos {
   display: flex;
   width: 350px;
   height: 60px;
@@ -2997,12 +2989,12 @@ input[type=radio] {
   margin-top: 63px;
 }
 
-.update_block{
+.update_block {
   margin-top: 63px;
   padding-bottom: 30px;
 }
 
-.big__block{
+.big__block {
   width: 200px;
   height: 200px;
   background-color: black;
@@ -3163,7 +3155,7 @@ input[type=radio] {
   background-size: cover;
 }
 
-.twig_pos{
+.twig_pos {
   display: flex;
   width: 250px;
   flex-direction: row;
@@ -3521,12 +3513,12 @@ input[type=radio] {
   transition: .4s;
 }
 
-.div___hidden{
+.div___hidden {
   display: flex;
   flex-direction: column;
 }
 
-.input___hidden{
+.input___hidden {
   height: 30px;
   width: 150px;
 }

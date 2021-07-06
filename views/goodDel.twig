@@ -1,14 +1,14 @@
 {% extends 'layouts/main.twig' %}
 {% block title %}Удаление товара{% endblock %}
 {% block content %}
-<form method="post"action="/good/getDelGood" class="women_empty">
-    <div class="bottom__block">
-        <input name="idForDel" value="{{ good.id }}" type="hidden">
-        <p class="del_text">Delete this good?</p>
-{#        <div class="btn_block">#}
+    <form method="post" action="/good/getDelGood" class="women_empty">
+        <div class="bottom__block">
+            <input name="idForDel" value="{{ good.id }}" type="hidden">
+            <p class="del_text">Delete this good?</p>
+            {# <div class="btn_block"> #}
             <input type="submit" value="Delete" class="add__bottom_cart">
             <a href="/good/one/?id={{ good.id }}" class="add__bottom_cart">Go Back</a>
-{#        </div>#}
-    </div>
-</form>
+            {# </div> #}
+        </div>
+    </form>
 {% endblock %}
